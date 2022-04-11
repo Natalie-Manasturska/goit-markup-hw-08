@@ -9,8 +9,8 @@ body {
   font-family: "Roboto", sans-serif;
   color: var(--third-color);
   font-size: 14px;
-  font-weight: normal;
   letter-spacing: 0.03em;
+  background-color: var(--first-color);
 }
 
 .link {
@@ -35,6 +35,11 @@ body {
 }
 
 /* --                    Header                        -- */
+
+header {
+  line-height: 1.14;
+}
+
 .nav-span {
   color: var(--third-color);
 }
@@ -42,8 +47,6 @@ body {
 .nav-link {
   color: inherit;
   font-weight: 500;
-
-  line-height: 1.14;
   letter-spacing: 0.02em;
 }
 
@@ -61,7 +64,6 @@ body {
 
 .header-contact {
   font-weight: 500;
-  line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--second-color);
 }
@@ -80,17 +82,26 @@ body {
   color: var(--first-color);
 }
 
+.footer-address {
+  line-height: 1.71;
+}
+
 .footer-link {
   font-family: inherit;
   font-style: normal;
-  line-height: 1.71;
   color: var(--first-color);
+}
+
+.footer-contact-map {
+  color: var(--first-color);
+  font-family: Roboto;
+  font-style: normal;
+  line-height: 2;
 }
 
 .footer-contact {
   font-family: Roboto;
   font-style: normal;
-  line-height: 1.71;
   color: rgba(255, 255, 255, 0.6);
 }
 
@@ -127,6 +138,7 @@ body {
   text-align: center;
   letter-spacing: 0.06em;
   color: var(--first-color);
+  cursor: pointer;
 }
 
 .hero-btn:hover,
@@ -150,7 +162,8 @@ body {
 }
 
 /*--                       Чем мы занимаемся                 --*/
-.about-title {
+.about-title,
+.team-title {
   font-size: 36px;
   line-height: 1.17;
   text-align: center;
@@ -159,12 +172,7 @@ body {
 /*--                      Наша команда                         --*/
 .team {
   background: #f5f4fa;
-}
-
-.team-title {
-  font-size: 36px;
-  line-height: 1.17;
-  text-align: center;
+  line-height: 1.19;
 }
 
 .team-item {
@@ -177,13 +185,11 @@ body {
 .team-list-title {
   font-weight: 500;
   font-size: 16px;
-  line-height: 1.19;
   text-align: center;
 }
 
 .team-list-post-title {
   font-size: 16px;
-  line-height: 1.19;
   text-align: center;
   color: var(--second-color);
 }
@@ -210,6 +216,7 @@ body {
   font-size: 16px;
   line-height: 1.63;
   text-align: center;
+  cursor: pointer;
 }
 
 .all-btn {
@@ -226,6 +233,7 @@ body {
   letter-spacing: 0.03em;
   color: var(--first-color);
   font-style: normal;
+  cursor: pointer;
 }
 
 .search-btn:hover,
