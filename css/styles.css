@@ -13,6 +13,20 @@ body {
   background-color: var(--first-color);
 }
 
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+ul {
+  margin: 0;
+  padding: 0;
+}
+
 .link {
   text-decoration: none;
 }
@@ -30,20 +44,72 @@ body {
   color: var(--brand-color);
 }
 
+img {
+  display: block;
+}
+
+.container {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+}
+
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
+
+.logo {
+  font-family: 'Raleway', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 26px;
+  line-height: calc(31 / 26);
+  color: var(--brand-color);
+}
+
 /* --                    Header                        -- */
 
 header {
   line-height: 1.14;
+  border-bottom: 1px solid #ececec;
+}
+
+.header-box {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+}
+.nav-a {
+  padding: 24px 78px 24px 0;
 }
 
 .nav-span {
   color: var(--third-color);
 }
 
+.nav-list {
+  display: flex;
+}
+
 .nav-link {
   color: inherit;
   font-weight: 500;
   letter-spacing: 0.02em;
+  padding: 32px 25px;
 }
 
 .nav-link-studio {
@@ -51,6 +117,7 @@ header {
   font-weight: 500;
   line-height: 1.33;
   letter-spacing: 0.02em;
+  padding: 32px 25px;
 }
 
 .nav-link:focus,
@@ -58,10 +125,26 @@ header {
   color: var(--brand-color);
 }
 
+.header-address {
+  display: flex;
+  align-items: center;
+}
+
+.header-contact-mail,
 .header-contact {
   font-weight: 500;
   letter-spacing: 0.02em;
   color: var(--second-color);
+  padding: 32px 25px;
+}
+
+.header-contact-mail {
+  color: var(--brand-color);
+}
+
+.header-contact-mail,
+.header-contact:last-child {
+  padding: 32px 0 32px 25px;
 }
 
 .header-contact:hover,
@@ -74,12 +157,26 @@ header {
   background: #2f303a;
 }
 
+.footer-box {
+  display: flex;
+  flex-direction: column;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
 .footer-span {
   color: var(--first-color);
 }
 
 .footer-address {
   line-height: 1.71;
+}
+
+.footer-item:not(:last-child) {
+  margin-bottom: 9px;
+}
+.footer-item:first-child {
+  margin-top: 20px;
 }
 
 .footer-link {
@@ -90,7 +187,7 @@ header {
 
 .footer-contact-map {
   color: var(--first-color);
-  font-family: Roboto;
+  font-family: inherit;
   font-style: normal;
   line-height: 2;
 }
@@ -101,15 +198,20 @@ header {
   color: rgba(255, 255, 255, 0.6);
 }
 
-.footer-contact:hover,
-.footer-contact:focus {
-  color: var(--brand-color);
-}
 /*--                 INDEX.HTML                    --*/
 
 /*--                    Hero                   --*/
 .hero {
   background: #2f303a;
+}
+
+.hero-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 200px;
+  padding-bottom: 200px;
 }
 
 .hero-title {
@@ -120,6 +222,9 @@ header {
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--first-color);
+  width: 700px;
+  height: 120px;
+  margin-bottom: 30px;
 }
 
 .hero-btn {
@@ -132,6 +237,9 @@ header {
   letter-spacing: 0.06em;
   color: var(--first-color);
   cursor: pointer;
+  width: 200px;
+  height: 50px;
+  border: none;
 }
 
 .hero-btn:hover,
@@ -140,14 +248,24 @@ header {
 }
 
 /*--                     Особенности                  --*/
-.benefits-title {
-  display: none;
+.benefits-list {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 94px;
+  margin-left: -30px;
+  padding-bottom: 94px;
+}
+
+.benefits-item {
+  margin-left: 30px;
+  flex-basis: calc(100% / 4 - 30px);
 }
 
 .benefits-list-title {
   font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
+  margin-bottom: 10px;
 }
 
 .benefits-list-post-title {
@@ -155,11 +273,23 @@ header {
 }
 
 /*--                       Чем мы занимаемся                 --*/
-.about-title,
-.team-title {
+.about-title {
   font-size: 36px;
   line-height: 1.17;
   text-align: center;
+}
+
+.about-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -30px;
+}
+
+.about-item {
+  margin-left: 30px;
+  flex-basis: calc(100% / 3 - 30px);
+  margin-top: 50px;
+  margin-bottom: 94px;
 }
 
 /*--                      Наша команда                         --*/
@@ -168,24 +298,50 @@ header {
   line-height: 1.19;
 }
 
+.team-box {
+  padding: 94px 15px;
+}
+
+.team-title {
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+}
+
 .team-item {
   background: var(--first-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
+    flex-basis: calc(100% / 4 - 30px);
+  margin-top: 50px;
+  margin-left: 30px;
 }
 
 .team-list-title {
   font-weight: 500;
   font-size: 16px;
   text-align: center;
+   padding: 5px; 
 }
 
-.team-list-post-title {
+.team-list-text {
   font-size: 16px;
   text-align: center;
   color: var(--second-color);
+  padding: 5px;
 }
+
+.team-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -30px;
+}
+
+.team-text {
+  padding: 25px;
+}
+
 
 /*--             PORTFOLIO.HTML              --*/
 
@@ -202,6 +358,15 @@ header {
 }
 
 /*--                          Main                      --*/
+.search-list {
+  display: flex;
+  padding: 94px 0 50px 0;
+  justify-content: center;
+}
+.search-item:not(:last-child) {
+  margin-right: 8px;
+}
+
 .search-btn,
 .all-btn {
   background: #f5f4fa;
@@ -210,6 +375,8 @@ header {
   font-size: 16px;
   line-height: 2.17;
   cursor: pointer;
+  border: none;
+  padding: 6px 22px;
 }
 
 .all-btn {
@@ -224,16 +391,34 @@ header {
   color: var(--first-color);
 }
 
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -30px;
+  margin-top: -30px;
+  padding-bottom: 94px;
+}
+
 .product-item {
   background: var(--first-color);
   border: 1px solid #eeeeee;
   box-sizing: border-box;
+
+}
+
+.product-title-box {
+  border-bottom: 1px solid #eeeeee;
+  border-right: 1px solid #eeeeee;
+  border-left: 1px solid #eeeeee;
+  box-sizing: content-box;
+  padding: 20px 24px 19px 24px;
 }
 
 .product-title {
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
+    margin-bottom: 4px;
 }
 
 .product-post-title {
