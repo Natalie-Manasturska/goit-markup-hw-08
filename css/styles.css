@@ -87,15 +87,17 @@ header {
 
 .header-box {
   display: flex;
-  justify-content: space-between;
 }
 
 .nav {
   display: flex;
   align-items: center;
+  /* margin-right: 331px; */
 }
 .nav-a {
-  padding: 24px 78px 24px 0;
+  margin-right: 93px;
+  margin-top: 24px;
+  margin-bottom: 25px;
 }
 
 .nav-span {
@@ -104,13 +106,19 @@ header {
 
 .nav-list {
   display: flex;
+  margin-top: 32px;
+  margin-bottom: 32px;
+  margin-right: 331px;
+}
+
+.nav-item:not(:last-child) {
+  margin-right: 50px;
 }
 
 .nav-link {
   color: inherit;
   font-weight: 500;
   letter-spacing: 0.02em;
-  padding: 32px 25px;
 }
 
 .nav-link-studio {
@@ -118,7 +126,6 @@ header {
   font-weight: 500;
   line-height: 1.33;
   letter-spacing: 0.02em;
-  padding: 32px 25px;
 }
 
 .nav-link:focus,
@@ -129,25 +136,29 @@ header {
 .header-address {
   display: flex;
   align-items: center;
+  margin-top: 32px;
+  margin-bottom: 32px;
 }
 
 .header-contact-mail,
-.header-contact {
+.header-contact,
+.header-contact-tel {
   font-weight: 500;
   letter-spacing: 0.02em;
   color: var(--second-color);
-  padding: 32px 25px;
 }
 
 .header-contact-mail {
   color: var(--brand-color);
+  margin-right: 50px;
 }
 
-.header-contact-mail,
-.header-contact:last-child {
-  padding: 32px 0 32px 25px;
+.header-contact-tel {
+  margin-left: 50px;
 }
 
+.header-contact-tel:hover,
+.header-contact-tel:focus,
 .header-contact:hover,
 .header-contact:focus {
   color: var(--brand-color);
@@ -249,12 +260,14 @@ header {
 }
 
 /*--                     Особенности                  --*/
+.benefits {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
 .benefits-list {
   display: flex;
   flex-wrap: wrap;
-  padding-top: 94px;
   margin-left: -30px;
-  padding-bottom: 94px;
 }
 
 .benefits-item {
@@ -274,10 +287,15 @@ header {
 }
 
 /*--                       Чем мы занимаемся                 --*/
+.about {
+  padding-bottom: 94px;
+}
+
 .about-title {
   font-size: 36px;
   line-height: 1.17;
   text-align: center;
+  margin-bottom: 50px;
 }
 
 .about-list {
@@ -289,24 +307,21 @@ header {
 .about-item {
   margin-left: 30px;
   flex-basis: calc(100% / 3 - 30px);
-  margin-top: 50px;
-  margin-bottom: 94px;
 }
 
 /*--                      Наша команда                         --*/
 .team {
   background: #f5f4fa;
   line-height: 1.19;
-}
-
-.team-box {
-  padding: 94px 15px;
+  padding-bottom: 94px;
+  padding-top: 94px;
 }
 
 .team-title {
   font-size: 36px;
   line-height: 1.17;
   text-align: center;
+  margin-bottom: 50px;
 }
 
 .team-item {
@@ -315,7 +330,6 @@ header {
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
   flex-basis: calc(100% / 4 - 30px);
-  margin-top: 50px;
   margin-left: 30px;
 }
 
