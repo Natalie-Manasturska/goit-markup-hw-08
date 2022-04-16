@@ -10,6 +10,7 @@ body {
   color: var(--third-color);
   font-size: 14px;
   font-weight: normal;
+  font-style: normal;
   letter-spacing: 0.03em;
   background-color: var(--first-color);
 }
@@ -23,6 +24,7 @@ h5,
 h6 {
   margin: 0;
 }
+
 ul {
   margin: 0;
   padding: 0;
@@ -71,7 +73,6 @@ img {
 
 .logo {
   font-family: "Raleway", sans-serif;
-  font-style: normal;
   font-weight: bold;
   font-size: 26px;
   line-height: 1.19;
@@ -79,7 +80,6 @@ img {
 }
 
 /* --                    Header                        -- */
-
 header {
   line-height: 1.14;
   border-bottom: 1px solid #ececec;
@@ -92,7 +92,6 @@ header {
 .nav {
   display: flex;
   align-items: center;
-  /* margin-right: 331px; */
 }
 .nav-a {
   margin-right: 93px;
@@ -167,11 +166,6 @@ header {
 /*--                    FOOTER                        --*/
 .footer {
   background: #2f303a;
-}
-
-.footer-box {
-  display: flex;
-  flex-direction: column;
   padding-top: 60px;
   padding-bottom: 60px;
 }
@@ -187,21 +181,16 @@ header {
 .footer-item:not(:last-child) {
   margin-bottom: 9px;
 }
-.footer-item:first-child {
-  margin-top: 20px;
-}
-
-.footer-link {
-  font-family: inherit;
-  font-style: normal;
-  color: var(--first-color);
-}
 
 .footer-contact-map {
   color: var(--first-color);
-  font-family: inherit;
   font-style: normal;
   line-height: 2;
+}
+
+.footer-a {
+  margin-bottom: 20px;
+  line-height: 2.59;
 }
 
 .footer-contact {
@@ -210,9 +199,18 @@ header {
   color: rgba(255, 255, 255, 0.6);
 }
 
-/*--                 INDEX.HTML                    --*/
+.footer-contact:hover,
+.footer-contact:focus {
+  color: var(--brand-color);
+}
 
-/*--                    Hero                   --*/
+.footer-contact-map:hover,
+.footer-contact-map:focus {
+  color: var(--brand-color);
+}
+
+/*--                 INDEX.HTML                              --*/
+/*--                    Hero                            --*/
 .hero {
   background: #2f303a;
 }
@@ -312,7 +310,6 @@ header {
 /*--                      Наша команда                         --*/
 .team {
   background: #f5f4fa;
-  line-height: 1.19;
   padding-bottom: 94px;
   padding-top: 94px;
 }
@@ -336,6 +333,7 @@ header {
 .team-list-title {
   font-weight: 500;
   font-size: 16px;
+  line-height: 1.19;
   text-align: center;
   padding: 5px;
 }
@@ -343,6 +341,7 @@ header {
 .team-list-text {
   font-size: 16px;
   text-align: center;
+  line-height: 1.19;
   color: var(--second-color);
   padding: 5px;
 }
@@ -358,7 +357,6 @@ header {
 }
 
 /*--             PORTFOLIO.HTML              --*/
-
 .portfolio-title {
   display: none;
 }
@@ -372,10 +370,14 @@ header {
 }
 
 /*--                          Main                      --*/
+.portfolio {
+  padding: 94px 0;
+}
+
 .search-list {
   display: flex;
-  padding: 94px 0 50px 0;
   justify-content: center;
+  margin-bottom: 50px;
 }
 .search-item:not(:last-child) {
   margin-right: 8px;
