@@ -38,6 +38,11 @@ ul {
   list-style: none;
 }
 
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
 .logo {
   font-family: "Raleway", sans-serif;
   font-style: normal;
@@ -110,6 +115,7 @@ img {
   font-weight: 500;
   letter-spacing: 0.02em;
   padding: 32px 0;
+  display: inline-block;
 }
 
 .nav-link-studio {
@@ -248,10 +254,6 @@ img {
 }
 
 /*--                     Особенности                  --*/
-.benefits {
-  padding-top: 94px;
-  padding-bottom: 94px;
-}
 .benefits-list {
   display: flex;
   flex-wrap: wrap;
@@ -276,7 +278,7 @@ img {
 
 /*--                       Чем мы занимаемся                 --*/
 .about {
-  padding-bottom: 94px;
+  padding-top: 0;
 }
 
 .about-title {
@@ -299,9 +301,7 @@ img {
 
 /*--                      Наша команда                         --*/
 .team {
-  background: #f5f4fa;
-  padding-bottom: 94px;
-  padding-top: 94px;
+  background-color: #f5f4fa;
 }
 
 .team-title {
@@ -360,10 +360,6 @@ img {
   display: inline-block;
 }
 /*--                          Main                      --*/
-.portfolio {
-  padding: 94px 0;
-}
-
 .search-list {
   display: flex;
   justify-content: center;
