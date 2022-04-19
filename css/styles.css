@@ -80,10 +80,6 @@ img {
 }
 
 /* --                    Header                        -- */
-header {
-  border-bottom: 1px solid #ececec;
-}
-
 .header-box {
   display: flex;
 }
@@ -113,12 +109,12 @@ header {
   color: inherit;
   font-weight: 500;
   letter-spacing: 0.02em;
+  padding: 32px 0;
 }
 
 .nav-link-studio {
   color: var(--brand-color);
   font-weight: 500;
-  line-height: 1.33;
   letter-spacing: 0.02em;
   padding: 32px 0;
   display: inline-block;
@@ -135,8 +131,8 @@ header {
   margin-left: auto;
 }
 
-.header-address-item {
-  margin-right: 20px;
+.header-address-item:not(:last-child) {
+  margin-right: 50px;
 }
 
 .header-contact-mail,
@@ -148,11 +144,8 @@ header {
 }
 
 .header-contact {
-  margin-left: 50px;
-}
-
-.header-contact-tel {
-  margin-left: 50px;
+  padding: 32px 0;
+  display: inline-block;
 }
 
 .header-contact-tel:hover,
@@ -362,7 +355,6 @@ header {
 .nav-link-portfolio {
   color: var(--brand-color);
   font-weight: 500;
-  line-height: 1.33;
   letter-spacing: 0.02em;
   padding: 32px 0;
   display: inline-block;
