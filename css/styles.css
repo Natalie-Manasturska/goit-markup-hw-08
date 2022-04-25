@@ -3,7 +3,7 @@
   --first-color: #ffffff;
   --second-color: #757575;
   --third-color: #212121;
-  --icon-color:#AFB1B8;
+  --icon-color: #afb1b8;
 }
 body {
   font-family: "Roboto", sans-serif;
@@ -155,9 +155,9 @@ img {
   justify-content: flex-end;
 }
 .social-box {
-padding-top: 72px;
-padding-bottom: 100px;
-margin-left: 70px;
+  padding-top: 72px;
+  padding-bottom: 100px;
+  margin-left: 70px;
 }
 .social-title {
   font-size: 14px;
@@ -235,14 +235,17 @@ margin-left: 70px;
 /*--                    Hero                            --*/
 .hero {
   background-color: #e5e5e5;
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-    url('../images/bg-hero.jpg');
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url("../images/bg-hero.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   max-width: 1600px;
   margin: 0 auto;
-    padding: 200px 0;
+  padding: 200px 0;
 }
 .hero-box {
   display: flex;
@@ -385,7 +388,7 @@ margin-left: 70px;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: var(--icon-color)
+  color: var(--icon-color);
 }
 .team-contact-icon {
   height: 20px;
