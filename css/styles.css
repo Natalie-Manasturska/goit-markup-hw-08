@@ -166,10 +166,6 @@ img {
   color: var(--first-color);
   margin-bottom: 20px;
 }
-.social-title:hover,
-.social-title:focus {
-  color: var(--brand-color);
-}
 .social-list {
   display: flex;
 }
