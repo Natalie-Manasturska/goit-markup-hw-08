@@ -134,7 +134,8 @@ img {
 }
 .header-contact {
   padding: 32px 0;
-  display: inline-block;
+  display: flex;
+  align-items: center;
 }
 .header-contact:hover,
 .header-contact:focus {
@@ -148,15 +149,44 @@ img {
 /*--                    FOOTER                        --*/
 .footer {
   background: #2f303a;
+  padding: 60px 0;
 }
 .footer-box {
   display: flex;
-  flex-direction: row-reverse;
-  justify-content: flex-end;
+  align-items: baseline;
+}
+.footer-span {
+  color: var(--first-color);
+}
+.footer-address {
+  line-height: 1.71;
+}
+.footer-item:not(:last-child) {
+  margin-bottom: 9px;
+}
+.footer-contact-map {
+  color: var(--first-color);
+  font-style: normal;
+  line-height: 2;
+}
+.footer-a {
+  margin-bottom: 20px;
+  display: block;
+}
+.footer-contact {
+  font-family: Roboto;
+  font-style: normal;
+  color: rgba(255, 255, 255, 0.6);
+}
+.footer-contact:hover,
+.footer-contact:focus {
+  color: var(--brand-color);
+}
+.footer-contact-map:hover,
+.footer-contact-map:focus {
+  color: var(--brand-color);
 }
 .social-box {
-  padding-top: 72px;
-  padding-bottom: 100px;
   margin-left: 70px;
 }
 .social-title {
@@ -189,43 +219,6 @@ img {
 .social-link:hover,
 .social-link:focus {
   background-color: var(--brand-color);
-}
-.address-box {
-  display: flex;
-  flex-direction: column;
-  padding-top: 60px;
-  padding-bottom: 60px;
-}
-.footer-span {
-  color: var(--first-color);
-}
-.footer-address {
-  line-height: 1.71;
-}
-.footer-item:not(:last-child) {
-  margin-bottom: 9px;
-}
-.footer-contact-map {
-  color: var(--first-color);
-  font-style: normal;
-  line-height: 2;
-}
-.footer-a {
-  margin-bottom: 20px;
-  display: block;
-}
-.footer-contact {
-  font-family: Roboto;
-  font-style: normal;
-  color: rgba(255, 255, 255, 0.6);
-}
-.footer-contact:hover,
-.footer-contact:focus {
-  color: var(--brand-color);
-}
-.footer-contact-map:hover,
-.footer-contact-map:focus {
-  color: var(--brand-color);
 }
 /*--                 INDEX.HTML                              --*/
 /*--                    Hero                            --*/
@@ -334,9 +327,6 @@ img {
 .team {
   background-color: #f5f4fa;
 }
-.team-box {
-  padding: 94px 15px;
-}
 .team-item {
   background-color: var(--first-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -345,27 +335,27 @@ img {
   flex-basis: calc(100% / 4 - 30px);
   margin-left: 30px;
 }
+.team-img {
+  margin-bottom: 30px;
+}
 .team-list-title {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
   text-align: center;
-  padding: 5px;
+  margin-bottom: 10px;
 }
 .team-list-text {
   font-size: 16px;
   text-align: center;
   line-height: 1.19;
   color: var(--second-color);
-  padding: 5px;
+  margin-bottom: 16px;
 }
 .team-list {
   display: flex;
   flex-wrap: wrap;
   margin-left: -30px;
-}
-.team-text {
-  padding: 25px;
 }
 .team-contact-list {
   display: flex;
@@ -410,7 +400,7 @@ img {
 .clients-link {
   color: var(--icon-color);
 }
-.clients-list-box {
+.clients-link {
   height: 92px;
   width: 170px;
   border: 1px solid currentColor;
@@ -421,8 +411,7 @@ img {
   align-items: center;
 }
 .clients-icon {
-  height: 160px;
-  width: 160px;
+  height: 60px;
   fill: currentColor;
 }
 .clients-link:focus,
