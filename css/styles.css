@@ -158,12 +158,15 @@ img {
   display: flex;
   align-items: center;
 }
+.nav-item:not(:last-child) {
+  margin-right: 50px;
+}
 .nav-link {
   color: inherit;
   font-weight: 500;
   line-height: calc(16 / 14);
   letter-spacing: 0.02em;
-  padding: 32px 25px;
+  padding: 32px 0;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .nav-link:focus,
@@ -207,9 +210,9 @@ img {
   content: "";
   position: absolute;
   height: 4px;
-  width: calc(100% - 50px);
+  width: 100%;
   background: var(--brand-color);
-  left: 25px;
+  left: 0;
   bottom: 0;
   border-radius: 2px;
 }
@@ -236,7 +239,6 @@ img {
   color: var(--first-color);
   font-style: normal;
   line-height: 2;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-a {
   margin-bottom: 20px;
@@ -250,10 +252,6 @@ img {
 }
 .footer-contact:hover,
 .footer-contact:focus {
-  color: var(--brand-color);
-}
-.footer-contact-map:hover,
-.footer-contact-map:focus {
   color: var(--brand-color);
 }
 .social-box {
@@ -392,7 +390,7 @@ img {
   flex-wrap: wrap;
   margin-left: -30px;
 }
-.about-item {
+.about-box {
   margin-left: 30px;
   flex-basis: calc(100% / 3 - 30px);
   position: relative;
@@ -466,6 +464,7 @@ img {
   height: 20px;
   width: 20px;
   fill: currentColor;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .team-contact-link:hover,
 .team-contact-link:focus {
@@ -496,11 +495,12 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .clients-icon {
   height: 60px;
   fill: currentColor;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .clients-link:focus,
 .clients-link:hover {
